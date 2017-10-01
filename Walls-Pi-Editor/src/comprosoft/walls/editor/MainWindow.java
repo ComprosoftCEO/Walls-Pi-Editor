@@ -1257,6 +1257,27 @@ public class MainWindow {
 		
 		Room r = getCurrentRoom();
 		
+		//Figure out when to disable stairs
+		if (this.roomZ == 0) {
+			item_rend.setEnabledState(STAIR_DOWN, false);
+		} else {
+			item_rend.setEnabledState(STAIR_DOWN, true);
+		}
+		
+		if (this.roomZ == this.dungeon.getHeight() - 1) {
+			item_rend.setEnabledState(STAIR_UP, false);
+		} else {
+			item_rend.setEnabledState(STAIR_UP, true);
+		}
+		
+		
+		if (item_rend.getEnabledState(STAIR_UP) && item_rend.getEnabledState(STAIR_DOWN)) {
+			item_rend.setEnabledState(STAIR_UP_DOWN, true);
+		} else {
+			item_rend.setEnabledState(STAIR_UP_DOWN, false);	
+		}
+		
+		
 		
 		//Update colors first
 		MainWindow.wallColor = r.getWallColor();
@@ -1347,27 +1368,6 @@ public class MainWindow {
 		} else {
 			this.but_StartRoom.setBackground(new Color(238,238,238));
 		}
-		
-		//Figure out when to disable stairs
-		if (this.roomZ == 0) {
-			item_rend.setEnabledState(STAIR_DOWN, false);
-		} else {
-			item_rend.setEnabledState(STAIR_DOWN, true);
-		}
-		
-		if (this.roomZ == this.dungeon.getHeight() - 1) {
-			item_rend.setEnabledState(STAIR_UP, false);
-		} else {
-			item_rend.setEnabledState(STAIR_UP, true);
-		}
-		
-		
-		if (item_rend.getEnabledState(STAIR_UP) && item_rend.getEnabledState(STAIR_DOWN)) {
-			item_rend.setEnabledState(STAIR_UP_DOWN, true);
-		} else {
-			item_rend.setEnabledState(STAIR_UP_DOWN, false);	
-		}
-		
 		
 	}
 	
