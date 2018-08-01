@@ -199,7 +199,7 @@ public class MainWindow {
 		frmWallsPiEditor = new JFrame();
 		frmWallsPiEditor.setResizable(false);
 		frmWallsPiEditor.setTitle("Walls Pi Editor");
-		frmWallsPiEditor.setBounds(100, 100, 542, 430);
+		frmWallsPiEditor.setBounds(100, 100, 542, 440);
 		frmWallsPiEditor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmWallsPiEditor.getContentPane().setLayout(new BorderLayout(0, 0));
 		frmWallsPiEditor.addKeyListener(new KeyEvents());
@@ -365,7 +365,7 @@ public class MainWindow {
 		
 		panelDisabler = new PanelDisable(panel_AllControls, null);
 		
-		but_RoomUp = new JButton("⏶");
+		but_RoomUp = new JButton("^");
 		but_RoomUp.setFocusable(false);
 		but_RoomUp.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -379,7 +379,7 @@ public class MainWindow {
 		but_RoomUp.setBounds(448, 190, 32, 32);
 		panel_AllControls.add(but_RoomUp);
 		
-		but_RoomDown = new JButton("⏷");
+		but_RoomDown = new JButton("v");
 		but_RoomDown.setFocusable(false);
 		but_RoomDown.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -393,7 +393,7 @@ public class MainWindow {
 		but_RoomDown.setBounds(448, 276, 32, 32);
 		panel_AllControls.add(but_RoomDown);
 		
-		but_RoomLeft = new JButton("⏴");
+		but_RoomLeft = new JButton("<");
 		but_RoomLeft.setFocusable(false);
 		but_RoomLeft.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -407,7 +407,7 @@ public class MainWindow {
 		but_RoomLeft.setBounds(408, 234, 32, 32);
 		panel_AllControls.add(but_RoomLeft);
 		
-		but_RoomRight = new JButton("⏵");
+		but_RoomRight = new JButton(">");
 		but_RoomRight.setFocusable(false);
 		but_RoomRight.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -421,7 +421,7 @@ public class MainWindow {
 		but_RoomRight.setBounds(488, 234, 32, 32);
 		panel_AllControls.add(but_RoomRight);
 		
-		but_LevelUp = new JButton("⇑");
+		but_LevelUp = new JButton("^");
 		but_LevelUp.setFocusable(false);
 		but_LevelUp.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -437,7 +437,7 @@ public class MainWindow {
 		panel_AllControls.add(but_LevelUp);
 		
 		
-		but_LevelDown = new JButton("⇓");
+		but_LevelDown = new JButton("v");
 		but_LevelDown.setFocusable(false);
 		but_LevelDown.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
